@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="photos/icon2.jpg">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+        <a class="navbar-brand">
+            <img src="photos/editedlogok.jpeg" width="35cm" height="30cm"> </a>
+
+        <button class=" navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarText " aria-controls="navbarText " aria-expanded="false " aria-label="Toggle navigation ">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarText ">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active ">
+                    <a href="/" class="btn btn-outline-primary  mr-sm-2" role="button" style="font-weight: bold;" aria-pressed=" true ">
+                        HOME
+                    </a>
+
+                    <li class="nav-item dropdown ">
+
+                        <a href="#" class="btn btn-outline-primary mr-sm-2" id="navbarDropdown " role="button" style="font-weight: bold;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CATEGORY
+                          </a>
+
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown ">
+                            <%for(i=0;i<nav.length;i++){%>
+
+                                <a class="dropdown-item " href="<%=nav[i].link%>">
+                                    <%=nav[i].name%>
+                                </a>
+                                <%}%>
+
+                                    <li class="nav-item ">
+                                        <a href="/addbook" class="btn btn-outline-primary  mr-sm-2" role="button" style="font-weight: bold;" aria-pressed=" true ">
+                                            ADD BOOK
+                                        </a>
+
+                                    </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ">
+
+                <a href="<%=nav[2].href%>" class="btn btn-outline-danger  mr-sm-2" role="button" style="font-weight: bold;" aria-pressed=" true ">
+                    <%=nav[2].heading%>
+                </a>
+                <a href="<%=nav[3].href%>" class="btn btn-outline-danger  mr-sm-2" role="button" style="font-weight: bold;" aria-pressed=" true ">
+                    <%=nav[3].heading%>
+                </a>
+
+
+            </ul>
+
+            </div>
+    </nav>
+    <section>
+        <h1>LIBRARY
+            <div class="scroll-left ">
+                <h3>Paradise for your favourite eBooks....</h3>
+            </div>
+
+        </h1>
+
+    </section>
+    <div class="box ">
+
+        <div class="imgbox ">
+            <img src="./photos/libhome.jpg " class="img1 " alt=" ">
+        </div>
+        <div class="content ">
+            <h2>To Explore More Books
+            </h2>
+            <a href="/signup " class="btn btn-primary ">Explore</a>
+            <!-- <button class="btn btn-outline-primary " href="/signup " method=get>Explore</button> -->
+        </div>
+    </div>
+
+
+    <!-- <section id="bg-image ">
+        <h1>LIBRARY
+            <div class="scroll-left ">
+                <p>Trending Books....</p>
+            </div>
+
+        </h1>
+
+        <br>
+    </section>
+
+
+    <section id="card ">
+
+        <div class="row row-cols-1 row-cols-md-3 ">
+            <div class="col mb-3 ">
+
+
+                <div class="card " style="width: 10cm;margin-top:-2cm; ">
+
+                    <img src="/photos/Where the crawdads sing.jpg " class="card-img-top ">
+
+                    <div class=" card-body ">
+                        <a href="https://www.theguardian.com/books/2019/jan/12/where-the-crawdads-sing-delia-owens-review ">
+                            Where the Crawdads Sing
+                        </a>
+
+                        <h5 class="card-text ">
+                            Owens, Delia
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col mb-4 ">
+                <div class="card " style=" width: 10cm;margin-top: -2cm; ">
+
+                    <img src="photos/spells of magic.png " class="card-img-top ">
+                    <div class="card-body ">
+                        <a href="https://www.bookrix.com/_ebook-forest-ostrander-spells-of-magic/ ">Spells of Magic</a>
+
+                        <h5 class="card-text ">Forest Ostrander</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 ">
+                <div class="card " style=" width: 10cm;margin-top: -2cm; ">
+                    <img src="./photos/kristin hannah.jpg " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <a href="https://www.barnesandnoble.com/review/kristin-hannah-the-nightingale ">The Nightingale</a>
+
+
+                        <h5 class="card-text "> Hannah Kristin</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 ">
+                <div class="card " style=" width: 10cm;margin-top: 0cm; ">
+                    <img src="./photos/american dirt.jpg " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <a href="https://www.theguardian.com/books/2020/jan/15/american-dirt-by-jeanine-cummins-review ">American Dirt: A Novel</a>
+
+                        <h5 class="card-text ">Cummins, Jeanine</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 ">
+                <div class="card " style=" width: 10cm;margin-top: 0cm; ">
+                    <img src="./photos/the mamba mentality.jpg " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <a href="https://www.kirkusreviews.com/book-reviews/kobe-bryant/the-mamba-mentality/ ">The Mamba Mentality: How I Play</a>
+
+
+                        <h5 class="card-text ">Bryant, Kobe</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 ">
+                <div class="card " style=" width: 10cm;margin-top: 0cm; ">
+                    <img src="./photos/the invisible man.jpg " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <a href="https://www.seattlepi.com/lifestyle/blogcritics/article/Book-Review-The-Invisible-Man-by-H-G-Wells-3372560.php ">The Invisible Man</a>
+
+                        <h5 class="card-text ">H G Wells</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <div class="container ">
+
+        <div class="spinner-grow text-muted "></div>
+        <div class="spinner-grow text-primary "></div>
+        <div class="spinner-grow text-success "></div>
+        <div class="spinner-grow text-info "></div>
+        <div class="spinner-grow text-warning "></div>
+        <div class="spinner-grow text-danger "></div>
+        <div class="spinner-grow text-secondary "></div>
+        <div class="spinner-grow text-dark "></div>
+        <div class="spinner-grow text-info "></div>
+        <div class="spinner-grow text-warning "></div>
+        <div class="spinner-grow text-danger "></div>
+        <div class="spinner-grow text-light "></div>
+    </div>
+
+    <div class="footer ">
+
+        <div class="row ">
+            <div class="col-md-5 "><br>
+                <a href="/contact "><img src="./photos/icon-contact.png " width="30 " height="30 " id="contact1 " alt=" ">Contact Us</a>
+
+            </div>
+
+            <div class="col-md-4 "><br>
+                <a href="/ ">Back to Top </a><br>
+            </div>
+            <div class="col-md-3 "><br>
+
+
+                <a href="https://www.facebook.com/ "><img src="./photos/fb.png " width="30 " height="30 " alt=" "> </a>
+                <a href="https://twitter.com/login "><img src="./photos/twitter.png " width="30 " height="30 " alt=" "> </a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en "><img src="./photos/instagram.jpeg " width="30 " height="30 " alt=" "> </a>
+
+
+
+            </div>
+        </div>
+        <div class="container text-center ">
+
+            <small>Copyright &copy; App</small>
+        </div>
+
+    </div>
+
+    <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css " integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh " crossorigin="anonymous ">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
